@@ -1,0 +1,2636 @@
+{
+  type: 'flow',
+  kind: 'artifact',
+  metadata: {
+    trifactaVersion: '9.6.0+1841331.20221021093010.e2f3a14c',
+    exportedAt: '2022-11-10T18:01:27.322Z',
+    exportedBy: 53309,
+    uuid: 'b26657a0-6121-11ed-ad6d-a516114860a4',
+    comment: 'PIMA DATASET - DATAFLOW',
+    primaryFlowIds: [
+      202334,
+    ],
+    edition: 'SaaS',
+    lastMigration: '20220721085341',
+  },
+  data: {
+    artifacts: [],
+    connections: [],
+    flows: [
+      {
+        settings: {
+          optimize: 'default',
+          optimizers: {
+            columnPruning: 'enabled',
+            filterPushdown: 'enabled',
+            columnPruningOnSource: 'enabled',
+            filterPushdownOnSource: 'enabled',
+            joinPushdown: 'default',
+            expressionPushdown: 'default',
+            aggPushdown: 'default',
+            unionPushdown: 'default',
+            mergePushdown: 'default',
+            profilePushdown: 'default',
+            samplePushdown: 'default',
+            customJsUdfPushdown: 'default',
+            advancedPushdown: 'default',
+            filesToBigQuery: 'default',
+            filesToSnowflake: 'enabled',
+            fullPushdown: 'enabled',
+          },
+          dbOverrides: {},
+        },
+        id: 202334,
+        name: 'Diabetes_DataFlow',
+        description: null,
+        defaultOutputDir: null,
+        fromExampleFlowHash: null,
+        fromExampleFlowName: null,
+        fromTemplateId: null,
+        flownodes: [
+          {
+            id: 1734703,
+            scriptId: 1594964,
+            flowNodeId: null,
+            wrangled: false,
+            referenceId: null,
+            sampleLoadLimit: null,
+          },
+          {
+            id: 1734704,
+            scriptId: 1594965,
+            flowNodeId: null,
+            wrangled: true,
+            referenceId: null,
+            sampleLoadLimit: null,
+          },
+          {
+            id: 1734705,
+            scriptId: 1594966,
+            flowNodeId: null,
+            wrangled: true,
+            referenceId: null,
+            sampleLoadLimit: null,
+          },
+          {
+            id: 1734735,
+            scriptId: 1594987,
+            flowNodeId: null,
+            wrangled: true,
+            referenceId: null,
+            sampleLoadLimit: null,
+          },
+        ],
+        notes: [],
+        flowgraphvertices: [
+          {
+            id: 1413684,
+            objectType: 'flownode',
+            objectId: 1734703,
+            x: 4,
+            y: 65,
+            width: null,
+            height: null,
+          },
+          {
+            id: 1413685,
+            objectType: 'flownode',
+            objectId: 1734704,
+            x: 244,
+            y: 65,
+            width: null,
+            height: null,
+          },
+          {
+            id: 1413687,
+            objectType: 'flownode',
+            objectId: 1734705,
+            x: 484,
+            y: 215,
+            width: null,
+            height: null,
+          },
+          {
+            id: 1413729,
+            objectType: 'flownode',
+            objectId: 1734735,
+            x: 484,
+            y: 365,
+            width: null,
+            height: null,
+          },
+          {
+            id: 1413686,
+            objectType: 'outputobject',
+            objectId: 202306,
+            x: 484,
+            y: 65,
+            width: null,
+            height: null,
+          },
+          {
+            id: 1413727,
+            objectType: 'outputobject',
+            objectId: 202315,
+            x: 724,
+            y: 215,
+            width: null,
+            height: null,
+          },
+          {
+            id: 1413743,
+            objectType: 'outputobject',
+            objectId: 202317,
+            x: 724,
+            y: 365,
+            width: null,
+            height: null,
+          },
+        ],
+        flowedges: [
+          {
+            id: 1487252,
+            inFlowNodeId: 1734703,
+            inPortId: null,
+            outFlowNodeId: 1734704,
+            outPortId: null,
+          },
+          {
+            id: 1487253,
+            inFlowNodeId: 1734704,
+            inPortId: null,
+            outFlowNodeId: 1734705,
+            outPortId: null,
+          },
+          {
+            id: 1487272,
+            inFlowNodeId: 1734704,
+            inPortId: null,
+            outFlowNodeId: 1734735,
+            outPortId: null,
+          },
+        ],
+        references: [],
+        flowrunparameteroverrides: [],
+        runparameters: [],
+        recipes: [
+          {
+            id: 1594964,
+            name: 'diabetes.csv',
+            description: 'Diabetes Dataset',
+            active: true,
+            nextPortId: 1,
+            steps: [
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    hidden: true,
+                  },
+                  kind: 'task',
+                  type: 'Load',
+                  parameters: {
+                    format: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'FormatBlob',
+                      parameters: {},
+                    },
+                    location: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'id://995297',
+                    },
+                    enableLineage: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column1',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: 'original_datasource_995297',
+                },
+                tableData: null,
+                portId: null,
+                id: 8097016,
+                hash: 'ca1bda75184e322df3572666b7ccc8fbf0b07692',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      column1: {
+                        type: [
+                          'String',
+                        ],
+                        _likely_types: [
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                          [
+                            'Map',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'SplitRows',
+                  parameters: {
+                    on: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: '\r\n',
+                    },
+                    col: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'column1',
+                      relation: null,
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097014,
+                hash: '49435ca14849ee2e63ebe7353ad1126e7f0139f9',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      column2: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column3: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column4: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column5: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column6: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column7: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column8: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column9: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column10: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Split',
+                  parameters: {
+                    col: {
+                      kind: 'column',
+                      type: 'Column',
+                      value: 'column1',
+                      relation: null,
+                    },
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'on',
+                    },
+                    on: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: ',',
+                    },
+                    limit: {
+                      kind: 'constant',
+                      type: 'Integer',
+                      value: 8,
+                    },
+                    quote: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: '"',
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column2',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column3',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column4',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column5',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column6',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column7',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column8',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column9',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column10',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097015,
+                hash: '5b889dcd7094a661b47d664959f93c68f23961d3',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      column2: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column3: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column4: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column5: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column6: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column7: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column8: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column9: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column10: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Set',
+                  parameters: {
+                    col: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Wildcard',
+                          value: '*',
+                          annotations: {
+                            includeLineage: false,
+                            includeFileLineage: false,
+                          },
+                          relation: null,
+                        },
+                      ],
+                    },
+                    value: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'If',
+                      parameters: {
+                        true_expression: {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Substitute',
+                          parameters: {
+                            ignoreCase: {
+                              kind: 'constant',
+                              type: 'Bool',
+                              value: false,
+                            },
+                            col: {
+                              annotations: {},
+                              kind: 'func',
+                              type: 'Trim',
+                              parameters: {
+                                col: {
+                                  kind: 'variable',
+                                  type: 'Variable',
+                                  value: 'col',
+                                },
+                              },
+                            },
+                            on: {
+                              kind: 'constant',
+                              type: 'Pattern',
+                              value: '{start}"|"{end}',
+                            },
+                            with: {
+                              kind: 'constant',
+                              type: 'String',
+                              value: '',
+                            },
+                          },
+                        },
+                        false_expression: {
+                          kind: 'variable',
+                          type: 'Variable',
+                          value: 'col',
+                        },
+                        predicate: {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'And',
+                          parameters: {
+                            lhs: {
+                              annotations: {},
+                              kind: 'func',
+                              type: 'StartsWith',
+                              parameters: {
+                                ignore_case: {
+                                  kind: 'constant',
+                                  type: 'Bool',
+                                  value: false,
+                                },
+                                lhs: {
+                                  annotations: {},
+                                  kind: 'func',
+                                  type: 'Trim',
+                                  parameters: {
+                                    col: {
+                                      kind: 'variable',
+                                      type: 'Variable',
+                                      value: 'col',
+                                    },
+                                  },
+                                },
+                                rhs: {
+                                  kind: 'constant',
+                                  type: 'String',
+                                  value: '"',
+                                },
+                              },
+                            },
+                            rhs: {
+                              annotations: {},
+                              kind: 'func',
+                              type: 'EndsWith',
+                              parameters: {
+                                ignore_case: {
+                                  kind: 'constant',
+                                  type: 'Bool',
+                                  value: false,
+                                },
+                                lhs: {
+                                  annotations: {},
+                                  kind: 'func',
+                                  type: 'Trim',
+                                  parameters: {
+                                    col: {
+                                      kind: 'variable',
+                                      type: 'Variable',
+                                      value: 'col',
+                                    },
+                                  },
+                                },
+                                rhs: {
+                                  kind: 'constant',
+                                  type: 'String',
+                                  value: '"',
+                                },
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097017,
+                hash: '40282b9f33bda52d56782faf4b09f10fdf753fd8',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      column2: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column3: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column4: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column5: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column6: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column7: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column8: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column9: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      column10: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Replace',
+                  parameters: {
+                    with: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: '"',
+                    },
+                    col: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'column',
+                          type: 'Wildcard',
+                          value: '*',
+                          annotations: {
+                            includeLineage: false,
+                            includeFileLineage: false,
+                          },
+                          relation: null,
+                        },
+                      ],
+                    },
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'on',
+                    },
+                    on: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: '""',
+                    },
+                    global: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097018,
+                hash: '6f8c35b5ef465a87a5fe6313c250a5b50f7a101b',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      Pregnancies: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      Glucose: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      BloodPressure: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      SkinThickness: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      Insulin: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      BMI: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      DiabetesPedigreeFunction: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      Age: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                      Outcome: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Header',
+                  parameters: {
+                    sanitize: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: false,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'Pregnancies',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'Glucose',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'BloodPressure',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'SkinThickness',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'Insulin',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'BMI',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'DiabetesPedigreeFunction',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'Age',
+                        },
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'Outcome',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: {
+                  column2: 'Pregnancies',
+                  column3: 'Glucose',
+                  column4: 'BloodPressure',
+                  column5: 'SkinThickness',
+                  column6: 'Insulin',
+                  column7: 'BMI',
+                  column8: 'DiabetesPedigreeFunction',
+                  column9: 'Age',
+                  column10: 'Outcome',
+                },
+                portId: null,
+                id: 8097019,
+                hash: 'b7a1e758f65a2c446b8d65994ca74468d1254fa2',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+            ],
+            dqScriptRules: [],
+          },
+          {
+            id: 1594965,
+            name: 'diabetes',
+            description: null,
+            active: true,
+            nextPortId: 1,
+            steps: [
+              {
+                columnMetadata: null,
+                task: {
+                  annotations: {
+                    hidden: true,
+                  },
+                  kind: 'task',
+                  type: 'Load',
+                  parameters: {
+                    format: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'FormatBlob',
+                      parameters: {},
+                    },
+                    location: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'portId://null',
+                    },
+                    enableLineage: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column1',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: 'original_datasource_995297',
+                },
+                tableData: null,
+                portId: null,
+                id: 8097020,
+                hash: '7c79444bd6331bd11010e9b270ec530d40f4f7b8',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+            ],
+            dqScriptRules: [],
+          },
+          {
+            id: 1594966,
+            name: 'Normalized_BP',
+            description: null,
+            active: true,
+            nextPortId: 1,
+            steps: [
+              {
+                columnMetadata: {
+                  Pregnancies: {
+                    id: '-65soiq',
+                  },
+                  Glucose: {
+                    id: '1mkpa69',
+                  },
+                  BloodPressure: {
+                    id: 'qovs9k',
+                  },
+                  SkinThickness: {
+                    id: '4ufvqmo',
+                  },
+                  Insulin: {
+                    id: '2uk34nl',
+                  },
+                  BMI: {
+                    id: '2abwjjb',
+                  },
+                  DiabetesPedigreeFunction: {
+                    id: '-10wxm5h',
+                  },
+                  Age: {
+                    id: '2abwjdo',
+                  },
+                  Outcome: {
+                    id: '2l6q52j',
+                  },
+                  TRIFACTA__FILE_LINEAGE_INFO: {
+                    id: '6abolfe',
+                  },
+                },
+                task: {
+                  annotations: {
+                    hidden: true,
+                  },
+                  kind: 'task',
+                  type: 'Load',
+                  parameters: {
+                    format: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'FormatBlob',
+                      parameters: {},
+                    },
+                    location: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'portId://null',
+                    },
+                    enableLineage: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column1',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: 'original_datasource_1734704',
+                },
+                tableData: null,
+                portId: null,
+                id: 8097021,
+                hash: '6ded15bc7882aaba87d700597a57d113c5bc964c',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  max_BloodPressure: {
+                    id: 'adhiweo',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      max_BloodPressure: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'GroupBy',
+                  parameters: {
+                    type: {
+                      kind: 'enumerable',
+                      type: 'Enumerable',
+                      value: 'flatAgg',
+                    },
+                    group: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [],
+                    },
+                    value: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Max',
+                          parameters: {
+                            col: {
+                              kind: 'column',
+                              type: 'Column',
+                              value: 'BloodPressure',
+                              relation: null,
+                            },
+                          },
+                          as: [
+                            'max_BloodPressure',
+                          ],
+                        },
+                      ],
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'max_BloodPressure',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097068,
+                hash: '07fb226e384665d494eb0697603d5a69718176d4',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  'max_BP - BP': {
+                    id: 'b5m0fr8',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      'max_BP - BP': {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Derive',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'single',
+                    },
+                    value: {
+                      annotations: {
+                        infix: false,
+                        parenthetical: false,
+                      },
+                      kind: 'func',
+                      type: 'Subtract',
+                      parameters: {
+                        lhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'max_BloodPressure',
+                          relation: null,
+                        },
+                        rhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'BloodPressure',
+                          relation: null,
+                        },
+                      },
+                    },
+                    as: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'max_BP - BP',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097069,
+                hash: '503288fb562ac3e2fa26029aad0ee9e31ddc9ff9',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  Normalized_BP: {
+                    id: '-33ua019',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      Normalized_BP: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Derive',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'single',
+                    },
+                    value: {
+                      annotations: {
+                        infix: false,
+                        parenthetical: false,
+                      },
+                      kind: 'func',
+                      type: 'Divide',
+                      parameters: {
+                        lhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'max_BP - BP',
+                          relation: null,
+                        },
+                        rhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'max_BloodPressure',
+                          relation: null,
+                        },
+                      },
+                    },
+                    as: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'Normalized_BP',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097071,
+                hash: 'f219fbd88c32bb02e94c7123f884b5cd5c8bcde4',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  max_BloodPressure1: {
+                    id: '6b78bm5',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      max_BloodPressure1: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'GroupBy',
+                  parameters: {
+                    type: {
+                      kind: 'enumerable',
+                      type: 'Enumerable',
+                      value: 'flatAgg',
+                    },
+                    value: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Max',
+                          parameters: {
+                            col: {
+                              kind: 'column',
+                              type: 'Column',
+                              value: 'BloodPressure',
+                              relation: null,
+                            },
+                          },
+                          as: [
+                            'max_BloodPressure1',
+                          ],
+                        },
+                      ],
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'max_BloodPressure1',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097212,
+                hash: 'eb6f537408822ac924d301d734f811c053cf5df8',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  abc: {
+                    id: '2ujosq',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      abc: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Derive',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'single',
+                    },
+                    value: {
+                      annotations: {
+                        infix: false,
+                        parenthetical: false,
+                      },
+                      kind: 'func',
+                      type: 'Subtract',
+                      parameters: {
+                        lhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'max_BloodPressure1',
+                          relation: null,
+                        },
+                        rhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'BloodPressure',
+                          relation: null,
+                        },
+                      },
+                    },
+                    as: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'abc',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097213,
+                hash: 'f15415447b721d54b483274819aa5ed2427da9ab',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  res: {
+                    id: '85k0jvs',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      res: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Derive',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'single',
+                    },
+                    value: {
+                      annotations: {
+                        infix: false,
+                        parenthetical: false,
+                      },
+                      kind: 'func',
+                      type: 'Divide',
+                      parameters: {
+                        lhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'abc',
+                          relation: null,
+                        },
+                        rhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'max_BloodPressure',
+                          relation: null,
+                        },
+                      },
+                    },
+                    as: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'res',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097214,
+                hash: '1bc901ef2604a801cde22d6b071beccdb97f114f',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+            ],
+            dqScriptRules: [],
+          },
+          {
+            id: 1594987,
+            name: 'Normalized_Glucose',
+            description: null,
+            active: true,
+            nextPortId: 1,
+            steps: [
+              {
+                columnMetadata: {
+                  Pregnancies: {
+                    id: '-65soiq',
+                  },
+                  Glucose: {
+                    id: '1mkpa69',
+                  },
+                  BloodPressure: {
+                    id: 'qovs9k',
+                  },
+                  SkinThickness: {
+                    id: '4ufvqmo',
+                  },
+                  Insulin: {
+                    id: '2uk34nl',
+                  },
+                  BMI: {
+                    id: '2abwjjb',
+                  },
+                  DiabetesPedigreeFunction: {
+                    id: '-10wxm5h',
+                  },
+                  Age: {
+                    id: '2abwjdo',
+                  },
+                  Outcome: {
+                    id: '2l6q52j',
+                  },
+                  TRIFACTA__FILE_LINEAGE_INFO: {
+                    id: '6abolfe',
+                  },
+                },
+                task: {
+                  annotations: {
+                    hidden: true,
+                  },
+                  kind: 'task',
+                  type: 'Load',
+                  parameters: {
+                    format: {
+                      annotations: {},
+                      kind: 'func',
+                      type: 'FormatBlob',
+                      parameters: {},
+                    },
+                    location: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'portId://null',
+                    },
+                    enableLineage: {
+                      kind: 'constant',
+                      type: 'Bool',
+                      value: true,
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'column1',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: 'original_datasource_1734704',
+                },
+                tableData: null,
+                portId: null,
+                id: 8097100,
+                hash: '6ded15bc7882aaba87d700597a57d113c5bc964c',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  max_Glucose: {
+                    id: '5j9vkt3',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      max_Glucose: {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'GroupBy',
+                  parameters: {
+                    type: {
+                      kind: 'enumerable',
+                      type: 'Enumerable',
+                      value: 'flatAgg',
+                    },
+                    value: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          annotations: {},
+                          kind: 'func',
+                          type: 'Max',
+                          parameters: {
+                            col: {
+                              kind: 'column',
+                              type: 'Column',
+                              value: 'Glucose',
+                              relation: null,
+                            },
+                          },
+                          as: [
+                            'max_Glucose',
+                          ],
+                        },
+                      ],
+                    },
+                    as: {
+                      kind: 'array',
+                      type: 'Array',
+                      value: [
+                        {
+                          kind: 'constant',
+                          type: 'String',
+                          value: 'max_Glucose',
+                        },
+                      ],
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097106,
+                hash: '15379f552dbccc5c34b1711eaaf19afd072a1723',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  'max_Glucose - Glucose': {
+                    id: '2jpju47',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      'max_Glucose - Glucose': {
+                        type: [
+                          'Integer',
+                        ],
+                        _likely_types: [
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Derive',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'single',
+                    },
+                    value: {
+                      annotations: {
+                        infix: false,
+                        parenthetical: false,
+                      },
+                      kind: 'func',
+                      type: 'Subtract',
+                      parameters: {
+                        lhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'max_Glucose',
+                          relation: null,
+                        },
+                        rhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'Glucose',
+                          relation: null,
+                        },
+                      },
+                    },
+                    as: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'max_Glucose - Glucose',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097112,
+                hash: '9fa2d2e9ee047ba7865e96e155d14e183ca41afa',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+              {
+                columnMetadata: {
+                  Normalized_Glucose: {
+                    id: '4vreit5',
+                  },
+                },
+                task: {
+                  annotations: {
+                    outputColumnAnnotations: {
+                      Normalized_Glucose: {
+                        type: [
+                          'Float',
+                        ],
+                        _likely_types: [
+                          [
+                            'Float',
+                          ],
+                          [
+                            'String',
+                          ],
+                          [
+                            'Integer',
+                          ],
+                          [
+                            'Phone',
+                          ],
+                          [
+                            'SSN',
+                          ],
+                        ],
+                      },
+                    },
+                  },
+                  kind: 'task',
+                  type: 'Derive',
+                  parameters: {
+                    type: {
+                      kind: 'bundle',
+                      type: 'Bundle',
+                      value: 'single',
+                    },
+                    value: {
+                      annotations: {
+                        infix: false,
+                        parenthetical: false,
+                      },
+                      kind: 'func',
+                      type: 'Divide',
+                      parameters: {
+                        lhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'max_Glucose - Glucose',
+                          relation: null,
+                        },
+                        rhs: {
+                          kind: 'column',
+                          type: 'Column',
+                          value: 'max_Glucose',
+                          relation: null,
+                        },
+                      },
+                    },
+                    as: {
+                      kind: 'constant',
+                      type: 'String',
+                      value: 'Normalized_Glucose',
+                    },
+                  },
+                  outputName: null,
+                },
+                tableData: null,
+                portId: null,
+                id: 8097115,
+                hash: 'f47e92098101a43a7ea8ab3d9f826bcc848ac706',
+                pbemappingartifacts: [],
+                targetmappingartifacts: [],
+                udfscriptlines: [],
+                dependencies: [],
+              },
+            ],
+            dqScriptRules: [],
+          },
+        ],
+        outputobjects: [
+          {
+            id: 202306,
+            execution: 'photon',
+            profiler: true,
+            flowNodeId: 1734704,
+            isAdhoc: true,
+            ignoreRecipeErrors: false,
+            name: null,
+            description: null,
+            publications: [],
+            writesettings: [
+              {
+                delim: ',',
+                id: 2297539,
+                path: 'tfs://shailendrakanshanacsda20-gx94/53309/diabetes.csv',
+                action: 'create',
+                format: 'csv',
+                compression: 'none',
+                header: true,
+                asSingleFile: true,
+                prefix: null,
+                suffix: '_increment',
+                hasQuotes: true,
+                includeMismatches: true,
+                connectionId: null,
+                runParameters: [],
+              },
+            ],
+            sqlscripts: [],
+            outputobjectdataflowoptions: [],
+            outputobjectsparkoptions: [],
+            outputobjectschemadriftoptions: [
+              {
+                id: 228071,
+                key: 'schemaValidation',
+                value: 'true',
+              },
+              {
+                id: 228072,
+                key: 'stopJobOnErrorsFound',
+                value: 'false',
+              },
+            ],
+          },
+          {
+            id: 202315,
+            execution: 'photon',
+            profiler: true,
+            flowNodeId: 1734705,
+            isAdhoc: true,
+            ignoreRecipeErrors: false,
+            name: null,
+            description: null,
+            publications: [],
+            writesettings: [
+              {
+                delim: ',',
+                id: 2297569,
+                path: 'tfs://shailendrakanshanacsda20-gx94/53309/Untitled recipe.csv',
+                action: 'create',
+                format: 'csv',
+                compression: 'none',
+                header: true,
+                asSingleFile: true,
+                prefix: null,
+                suffix: '_increment',
+                hasQuotes: true,
+                includeMismatches: true,
+                connectionId: null,
+                runParameters: [],
+              },
+            ],
+            sqlscripts: [],
+            outputobjectdataflowoptions: [],
+            outputobjectsparkoptions: [],
+            outputobjectschemadriftoptions: [
+              {
+                id: 228085,
+                key: 'schemaValidation',
+                value: 'true',
+              },
+              {
+                id: 228086,
+                key: 'stopJobOnErrorsFound',
+                value: 'false',
+              },
+            ],
+          },
+          {
+            id: 202317,
+            execution: 'photon',
+            profiler: true,
+            flowNodeId: 1734735,
+            isAdhoc: true,
+            ignoreRecipeErrors: false,
+            name: null,
+            description: null,
+            publications: [],
+            writesettings: [
+              {
+                delim: ',',
+                id: 2297514,
+                path: 'tfs://shailendrakanshanacsda20-gx94/53309/Untitled recipe.csv',
+                action: 'create',
+                format: 'csv',
+                compression: 'none',
+                header: true,
+                asSingleFile: true,
+                prefix: null,
+                suffix: '_increment',
+                hasQuotes: true,
+                includeMismatches: true,
+                connectionId: null,
+                runParameters: [],
+              },
+            ],
+            sqlscripts: [],
+            outputobjectdataflowoptions: [],
+            outputobjectsparkoptions: [],
+            outputobjectschemadriftoptions: [
+              {
+                id: 228061,
+                key: 'schemaValidation',
+                value: 'true',
+              },
+              {
+                id: 228062,
+                key: 'stopJobOnErrorsFound',
+                value: 'false',
+              },
+            ],
+          },
+        ],
+        datasources: [
+          {
+            path: '/53309/uploads/53309/0984c904-dd90-4883-a5ac-1afcdcb741f9/diabetes.csv',
+            bucket: null,
+            userinfo: null,
+            type: 'tfs',
+            host: 'shailendrakanshanacsda20-gx94',
+            hasDynamicBucket: false,
+            hasDynamicUserInfo: false,
+            hasDynamicHost: false,
+            isDynamicOrConverted: false,
+            id: 995297,
+            dynamicPath: null,
+            dynamicBucket: null,
+            dynamicHost: null,
+            dynamicUserInfo: null,
+            connectionId: null,
+            isSchematized: true,
+            isDynamic: false,
+            isConverted: false,
+            disableTypeInference: false,
+            hasStructuring: true,
+            hasSchemaErrors: false,
+            parsingScriptId: 1594964,
+            storageLocation: {
+              fullUri: 'tfs://shailendrakanshanacsda20-gx94/53309/uploads/53309/0984c904-dd90-4883-a5ac-1afcdcb741f9/diabetes.csv',
+              id: 8846347,
+              path: '/53309/uploads/53309/0984c904-dd90-4883-a5ac-1afcdcb741f9/diabetes.csv',
+              size: 23873,
+              type: 'tfs',
+              bucket: null,
+              blobHost: null,
+              container: null,
+              hash: 'e4be735e14e232e3321180c64f4715ecaeeb004d',
+              host: 'shailendrakanshanacsda20-gx94',
+              userinfo: null,
+            },
+            runParameters: [],
+          },
+        ],
+        webhookflowtasks: [],
+      },
+    ],
+    udfscriptartifacts: [],
+  },
+  hash: 'mDnjY2DoYoJGHfISp7sFM8WM8ucycyye',
+}

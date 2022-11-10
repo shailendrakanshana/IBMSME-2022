@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "A basic line chart example.",
+  "width": 500,
+  "height": 200,
+  "padding": 5,
+  "signals": [
+    {
+      "name": "interpolate",
+      "value": "linear",
+      "bind": {
+        "input": "select",
+        "options": [
+          "basis",
+          "cardinal",
+          "catmull-rom",
+          "linear",
+          "monotone",
+          "natural",
+          "step",
+          "step-after",
+          "step-before"
+        ]
+      }
+    }
+  ],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {"x": 0, "y": 60, "c": 0},
+        {"x": 0, "y": 22, "c": 1},
+        {"x": 1, "y": 35, "c": 0},
+        {"x": 1, "y": 9, "c": 1},
+        {"x": 2, "y": 57, "c": 0},
+        {"x": 2, "y": 11, "c": 1},
+        {"x": 3, "y": 55, "c": 0},
+        {"x": 3, "y": 7, "c": 1},
+        {"x": 4, "y": 49, "c": 0},
+        {"x": 4, "y": 18, "c": 1},
+        {"x": 5, "y": 36, "c": 0},
+        {"x": 5, "y": 1, "c": 1},
+        {"x": 6, "y": 27, "c": 0},
+        {"x": 6, "y": 30, "c": 1},
+        {"x": 7, "y": 9, "c": 0},
+        {"x": 7, "y": 5, "c": 1},
+        {"x": 8, "y": 78, "c": 0},
+        {"x": 8, "y": 4, "c": 1}
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "point",
+      "range": "width",
+      "domain": {"data": "table", "field": "x"}
+    },
+    {
+      "name": "y",
+      "type": "linear",
+      "range": "height",
+      "nice": true,
+      "zero": true,
+      "domain": {"data": "table", "field": "y"}
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "range": "category",
+      "domain": {"data": "table", "field": "c"}
+    }
+  ],
+  "axes": [
+    {"orient": "bottom", "scale": "x"},
+    {"orient": "left", "scale": "y"}
+  ],
+  "marks": [
+    {
+      "type": "group",
+      "from": {"facet": {"name": "series", "data": "table", "groupby": "c"}},
+      "marks": [
+        {
+          "type": "line",
+          "from": {"data": "series"},
+          "encode": {
+            "enter": {
+              "x": {"scale": "x", "field": "x"},
+              "y": {"scale": "y", "field": "y"},
+              "stroke": {"scale": "color", "field": "c"},
+              "strokeWidth": {"value": 2}
+            },
+            "update": {
+              "interpolate": {"signal": "interpolate"},
+              "strokeOpacity": {"value": 1}
+            },
+            "hover": {"strokeOpacity": {"value": 0.5}}
+          }
+        }
+      ]
+    }
+  ],
+  "config": {}
+};
+    vegaEmbed("#vis", spec, {mode: "vega"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
