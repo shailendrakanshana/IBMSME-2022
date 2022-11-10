@@ -1,12 +1,16 @@
 # IBM_SME_Nov2022
 
-Day 1 - 8th November 2022 - Data Source
+<h2> Day 1 - 8th November 2022 - Data Source </h2>
 
-Data Source Link (Beijing Pollution Dataset)- https://www.kaggle.com/datasets/sid321axn/beijing-multisite-airquality-data-set
+DataSet Source - <a href="https://www.kaggle.com/datasets/sid321axn/beijing-multisite-airquality-data-set">Beijing Pollution DataSet</a><br>
+DataSet Source - <a href="https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews ">IMDB Movie Review DataSet</a>
+<br>
 
 
+<h2> Day 1 - 8th November 2022 - Data Source </h2>
 
+<h3> DataFlow -  </h3>
 
+Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. 
 
-Data Source Link (IMDB DataSet) - https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
-
+<h3> Tool used - <h3>  <a href="https://vega.github.io/vega/">Vega Visualization ( OpenSource ) </a>
