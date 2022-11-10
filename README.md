@@ -17,6 +17,8 @@ Data visualization is the graphical representation of information and data. By u
 
 <h3> DataFlow - <h3>
 
+Dataflow is used for processing & enriching batch or stream data for use cases such as analysis, machine learning or data warehousing. Dataflow is a serverless, fast and cost-effective service that supports both stream and batch processing.
+
 <h3> Tool used - <h3>  <a href="https://cloud.trifacta.com/"> Designer Cloud ( TRIFACTA ) </a>
 
 
