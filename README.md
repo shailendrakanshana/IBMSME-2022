@@ -18,7 +18,7 @@ Data visualization is the graphical representation of information and data. By u
 <h4> Kohli and Rohit against pakistan<h4>
 <br>
 
-<img src="Visualization_vega/Kohli_and_Rohit_Sharma_vs_Pak.png" alt="Girl in a jacket">
+<img src="Visualization_vega/Kohli_and_Rohit_Sharma_vs_Pak.png" alt="Chart">
 
 <h3> DataFlow - <h3>
 
@@ -26,4 +26,8 @@ Dataflow is used for processing & enriching batch or stream data for use cases s
 
 <h3> Tool used - <h3>  <a href="https://cloud.trifacta.com/"> Designer Cloud ( TRIFACTA ) </a>
 
+<br>
+<h4> Pima Diabetes DataSet dataFlow<h4>
+<br>
 
+<img src="flow_Diabetes_DataFlow/Diabetes_DataFlow.png" alt="Girl in a jacket">
