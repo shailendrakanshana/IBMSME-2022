@@ -14,6 +14,11 @@ DataSet Source - <a href="https://www.kaggle.com/datasets/lakshmi25npathi/imdb-d
 Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, data visualization tools provide an accessible way to see and understand trends, outliers, and patterns in data. 
 
 <h3> Tool used - <h3>  <a href="https://vega.github.io/vega/">Vega Visualization ( OpenSource ) </a>
+<br>
+<h4> Kohli and Rohit against pakistan<h4>
+<br>
+
+<img src="Visualization_vega/Kohli_and_Rohit_Sharma_vs_Pak.png" alt="Girl in a jacket">
 
 <h3> DataFlow - <h3>
 
